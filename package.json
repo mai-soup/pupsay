@@ -1,0 +1,12 @@
+{
+  "name": "pupsay",
+  "version": "0.0.1",
+  "description": "Cowsay but doggos.",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "npx nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maijs Garais",
+  "license": "MIT"
+}
