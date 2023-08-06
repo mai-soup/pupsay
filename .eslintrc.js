@@ -1,14 +1,19 @@
 module.exports = {
+  root: true,
+  globals: {
+    process: true,
+  },
   env: {
+    node: true,
     browser: true,
     commonjs: true,
     es2021: true,
-    node: true,
+    jest: true,
   },
-  extends: ['airbnb-base', 'plugin:prettier/recommended', 'prettier'],
   parserOptions: {
     ecmaVersion: 'latest',
   },
+  extends: ['airbnb-base', 'plugin:prettier/recommended', 'prettier'],
   plugins: ['import', 'prettier'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
