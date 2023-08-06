@@ -6,10 +6,17 @@ it('returns a string', () => {
   expect(result).toBe(expected);
 });
 
-it('splits long message into multiple lines by word', () => {
+it('splits long message into multiple lines by word with default lineWidth', () => {
   const result = bubble.say('woof '.repeat(40)).split('\n').length;
   // 5 chars * 40 = 200 chars, should be split into 3 lines
   // as default splits at 80 chars
   const expected = 3;
+  expect(result).toBe(expected);
+});
+
+it('splits long message into multiple lines by word with custom lineWidth', () => {
+  const result = bubble.say('woof '.repeat(40), 60).split('\n').length;
+  // 5 chars * 40 = 200 chars, should be split into 4 lines
+  const expected = 4;
   expect(result).toBe(expected);
 });
